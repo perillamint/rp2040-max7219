@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "rp2040-max7219",
+    "embassy/embassy-embedded-hal",
+    "embassy/embassy-sync",
+    "embassy/embassy-executor",
+    "embassy/embassy-time",
+    "embassy/embassy-rp",
+    "embassy/embassy-usb",
+    "embassy/embassy-futures",
+    "embassy/embassy-usb-logger",
+]
+
+[profile.dev]
+codegen-units = 1
+debug = true
+incremental = true
+lto = true
+opt-level = 's'
+panic = "abort"
